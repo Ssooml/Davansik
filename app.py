@@ -90,7 +90,7 @@ def start(message):
     web_app_button = telebot.types.InlineKeyboardButton(
         text="Открыть веб-приложение",
         web_app=telebot.types.WebAppInfo(
-            url=f"https://davansik.onrender.com{username}"  # Замените на ваш домен
+            url=f"https://davansik.onrender.com/webapp/{username}"  # Замените на ваш домен
         )
     )
     keyboard.add(web_app_button)
