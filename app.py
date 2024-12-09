@@ -1,11 +1,10 @@
-from flask import Flask, render_template_string
+from flask import Flask, render_template_string, request
 import telebot
 from threading import Thread
 
 # --- Настройки ---
-API_TOKEN = '7676387813:AAGchhB9OE9w4YkCPf0gOyazCxSoiiYohIQ'  # Замените на ваш токен бота
+API_TOKEN = '7676387813:AAGchhB9OE9w4YkCPf0gOyazCxSoiiYohIQ'  # Замените на ваш токен
 PORT = 5000  # Порт для Flask-приложения
-
 app = Flask(__name__)
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -28,6 +27,12 @@ def webapp(username):
                 font-family: Arial, sans-serif;
                 background-color: #454343;
             }
+            header {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
             main {
                 flex: 1;
                 display: none;
@@ -40,6 +45,7 @@ def webapp(username):
             }
             .card {
                 width: 100%;
+                height: 100%;
                 max-width: 800px;
                 background-color: #ffffff;
                 border-radius: 10px;
@@ -55,8 +61,8 @@ def webapp(username):
             }
             .button-container {
                 display: flex;
-                justify-content: center; /* Центрирует кнопки */
-                gap: 15px; /* Расстояние между кнопками */
+                justify-content: flex-end; /* Располагает кнопки справа */
+                gap: 20px; /* Расстояние между кнопками */
             }
             .button {
                 padding: 12px 24px;
@@ -70,6 +76,12 @@ def webapp(username):
             }
             .button:hover {
                 background-color: #0056b3;
+            }
+            footer {
+                display: flex;
+                justify-content: center;
+                background-color: #f1f1f1;
+                padding: 10px;
             }
         </style>
         <script>
