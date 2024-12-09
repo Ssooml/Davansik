@@ -1,11 +1,12 @@
-
-from flask import Flask, request, render_template, abort
+from flask import Flask, request, render_template
 import sqlite3
+import os
 
 app = Flask(__name__)
 
 # Подключение к базе данных
-conn = sqlite3.connect('../bot/database.db', check_same_thread=False)
+DATABASE = '../bot/database.db'
+conn = sqlite3.connect(DATABASE, check_same_thread=False)
 cursor = conn.cursor()
 
 
@@ -36,4 +37,5 @@ def search():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Используем порт из переменной окружения или 5000
+    app.run(host='0.0.0.0', port=port, debug=True)
