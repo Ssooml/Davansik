@@ -1,10 +1,7 @@
 from flask import Flask
+from webapp.routes import configure_routes
 
 def create_app():
     app = Flask(__name__)
-
-    # Регистрация блюпринтов
-    from .routes import webapp_bp
-    app.register_blueprint(webapp_bp)
-
+    configure_routes(app)
     return app
