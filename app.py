@@ -12,7 +12,7 @@ bot = telebot.TeleBot(API_TOKEN)
 @app.route('/webapp/<username>', methods=['GET'])
 def webapp(username):
     return render_template_string("""
-    !DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
