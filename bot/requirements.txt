@@ -1,2 +1,0 @@
-aiogram==2.22
-sqlite3==0.1.0
