@@ -1,1 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ЭдитСт</title>
+</head>
+<body>
+    <h1>Добро пожаловать в ЭдитСт!</h1>
+    <p>Ваш ник: {{ username }}</p>
+    <p>Ваш ID: {{ user_id }}</p>
 
+    <form action="/search" method="get">
+        <input type="text" name="q" placeholder="Введите ключевые слова для поиска" />
+        <button type="submit">Искать</button>
+    </form>
+</body>
+</html>
