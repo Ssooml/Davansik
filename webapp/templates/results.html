@@ -1,1 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты поиска</title>
+</head>
+<body>
+    <h1>Результаты поиска</h1>
 
+    {% if results %}
+        <ul>
+        {% for file_path, keywords in results %}
+            <li>
+                <a href="{{ file_path }}" target="_blank">Скачать файл</a> (Ключевые слова: {{ keywords }})
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Ничего не найдено.</p>
+    {% endif %}
+</body>
+</html>
