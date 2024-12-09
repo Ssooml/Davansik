@@ -95,7 +95,7 @@ def webapp(username):
         <main id="page1" class="active">
             <div class="card">
                 <div class="card-content">
-                    <h1>Это первая страница</h1>
+                    <h1>Главная</h1>
                 </div>
                 <div class="button-container">
                     <button class="button" onclick="showPage('page1')">Страница 1</button>
@@ -106,7 +106,7 @@ def webapp(username):
         <main id="page2">
             <div class="card">
                 <div class="card-content">
-                    <h1>Это вторая страница</h1>
+                    <h1>Ваш профиль</h1>
                     <p>Ваш никнейм: {{ username }}</p>
                 </div>
                 <div class="button-container">
